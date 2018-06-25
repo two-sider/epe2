@@ -11,7 +11,7 @@
   <ion-card>
     <img src="../../assets/img/background.jpg"/>
     <ion-card-content>
-        <ion-list no-lines>
+        <ion-list>
             <button ion-item *ngFor="let libro of libros" (click)="gotoDetalle(libro.id)">
               {{ libro.title }}
             </button> 
