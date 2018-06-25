@@ -1,0 +1,35 @@
+<!--
+  Generated template for the DetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle de Libro</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-label fixed>Titulo</ion-label>
+        <ion-input type="text" [(ngModel)]="libro.title"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label fixed>Autor</ion-label>
+        <ion-input type="text" [(ngModel)]="libro.author"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+          <ion-label fixed>Fecha de publicacion</ion-label>
+          <ion-input type="text" [(ngModel)]="libro.date"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="addLibro()">Ingresar Libro</button>
+    <button *ngIf="id !=0" ion-button block color="danger" (click)="deleteLibro()">Eliminar Libro</button>
+</ion-content>
